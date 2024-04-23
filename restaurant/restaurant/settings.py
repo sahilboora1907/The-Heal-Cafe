@@ -59,7 +59,7 @@ ROOT_URLCONF = 'restaurant.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'restaurantAPI',
         'USER': 'root',
-        'PASSWORD': 'Sahil#7091',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '3306',
     }
