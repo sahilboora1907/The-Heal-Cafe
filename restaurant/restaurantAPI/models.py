@@ -11,11 +11,19 @@ class Booking(models.Model):
     def __str__(self) -> str:
         return self.Name
     
+#Category Model
+class Category(models.Model):
+    Name = models.CharField(max_length=255)
+
+    def __str__(self) -> str:
+        return self.Name
+
 #Menu Model
 class MenuItems(models.Model):
     Title = models.CharField(max_length=255)
     Price = models.DecimalField(max_digits=5, decimal_places=2)
     Inventory = models.IntegerField()
+    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return self.Title
