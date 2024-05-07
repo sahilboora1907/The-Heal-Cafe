@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v88_$yosyqr*wj7wb&&*+b_a&22!4r56=bue0hnbtydjjo*ik4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['the-heal-cafe.onrender.com']
 
 
 # Application definition
