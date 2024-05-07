@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'restaurantAPI',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': 'db-75ali8hrvj7z',
+        'USER': 'db-75ali8hrvj7z',
+        'PASSWORD': 'Sahil#1907',
+        'HOST': 'up-us-sjo1-mysql-1.db.run-on-seenode.com',
+        'PORT': '11550',
     }
 }
 
