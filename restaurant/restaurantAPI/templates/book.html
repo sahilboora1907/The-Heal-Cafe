@@ -11,13 +11,26 @@
       <div class="column">
           {% csrf_token %}
           <form method="POST" id="form">
-            <!-- {% csrf_token %} -->
             <p>
-              <label for="first_name">Name:</label>
-              <input type="text" placeholder="Your Name" maxlength="200" required="" id="first_name"/>
+              <label for="name">Name:</label>
+              <input type="text" placeholder="Your Name" maxlength="200" required="" id="name"/>
             </p>
             <p>
-            <!-- Step 9: Part one -->
+              <label for="no_of_guests">Number of guests:</label>
+              <select id="no_of_guests">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </p>
+            <p>
               <label for="reservation_date">Reservation date:</label>
               <input type="date" value="2024-01-01" id="reservation_date"/>
             </p>
@@ -74,7 +87,7 @@
           let item = data[i];
           console.log(item.fields);
           reserved_slots.push(item.fields.reservation_slot)
-          bookings += '<p>'+item.fields.first_name+' - '+formatTime(item.fields.reservation_slot)+'</p>'
+          bookings += '<p>'+item.fields.name+' - '+formatTime(item.fields.reservation_slot)+'</p>'
         }
         
         slot_options = '<option value="0" disabled>Select time</option>'
@@ -106,7 +119,8 @@
 // Function to make a reservation
   document.getElementById('button').addEventListener('click', function (e) {
     const formdata = {
-      first_name: document.getElementById('first_name').value,
+      name: document.getElementById('name').value,
+      no_of_guests: document.getElementById('no_of_guests').value,
       reservation_date: document.getElementById('reservation_date').value,
       reservation_slot: document.getElementById('reservation_slot').value,
     }
